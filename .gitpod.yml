@@ -1,0 +1,26 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Initialize Project
+    init: yarn install
+    command: yarn start
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
+
+# Uncomment the below section if you need a Docker setup
+# dockerfile:
+#   image: file: .gitpod.Dockerfile
+
+# Optional prebuilds
+# prebuilds:
+#   github:
+#     prebuilds:
+#       - onPush: [main, dev]
+
